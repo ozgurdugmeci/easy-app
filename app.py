@@ -40,7 +40,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  
  urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
  st.markdown(urly_upload,unsafe_allow_html=True)
- st.info('Some characters on csv file other than Unicode Standard can cause error. ')   
+ st.info('Characters on upload files other than Unicode Standard can cause error. ')   
 
 
  st.set_option('deprecation.showfileUploaderEncoding', False)
