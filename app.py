@@ -36,11 +36,13 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
 
  st.title("1- UPLOADING FILES")
  st.header('A- Upload Inventory File')
- st.info('A- Some characters on csv file other than Unicode Standard can cause error. ')    
+   
  
  urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
  st.markdown(urly_upload,unsafe_allow_html=True)
- 
+ st.info('Some characters on csv file other than Unicode Standard can cause error. ')   
+
+
  st.set_option('deprecation.showfileUploaderEncoding', False)
  uploaded_file = st.file_uploader("Select Inventory File", type=['csv'])
  
