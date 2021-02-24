@@ -41,7 +41,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.markdown(urly_upload,unsafe_allow_html=True)
  
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file = st.file_uploader("Select Inventory File", type=['csv'],encoding='ISO-8859-1')
+ uploaded_file = st.file_uploader("Select Inventory File", type=['csv'])
  
  if uploaded_file :
   
@@ -79,7 +79,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.header('B- Upload Sales20 File')
  
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file2 = st.file_uploader("Select Sales20 File", type=['csv'],encoding='ISO-8859-1')
+ uploaded_file2 = st.file_uploader("Select Sales20 File", type=['csv'])
  
  if uploaded_file2 :
   
@@ -119,7 +119,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.header('C- Upload Sales40 File')
  
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file3 = st.file_uploader("Select Sales40 File", type=['csv'],encoding='ISO-8859-1')
+ uploaded_file3 = st.file_uploader("Select Sales40 File", type=['csv'])
  
  if uploaded_file3 :
   
@@ -156,7 +156,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.header('D- Upload Sales60 File')
  
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file4 = st.file_uploader("Select Sales60 File", type=['csv'],encoding='ISO-8859-1')
+ uploaded_file4 = st.file_uploader("Select Sales60 File", type=['csv'])
  
  if uploaded_file4 :
   
@@ -193,7 +193,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.header('E- Upload Sales80 File')
  
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file5 = st.file_uploader("Select Sales80 File", type=['csv'],encoding='ISO-8859-1')
+ uploaded_file5 = st.file_uploader("Select Sales80 File", type=['csv'])
  
  if uploaded_file5 :
   
