@@ -24,6 +24,10 @@ kilit3 = 0
 kilit4 = 0
 kilit5 = 0
 
+takip= f'<head> <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script> <script async src="//static.getclicky.com/js"></script> </head>'
+st.markdown(takip, unsafe_allow_html=True)    
+
+
 
 st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
@@ -525,8 +529,7 @@ elif yan_sayfa_secenek == 'Contact' :
  
  
 elif yan_sayfa_secenek == 'Application Guide' :
- takip= f'<head> <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script> <script async src="//static.getclicky.com/js"></script> </head>'
- st.markdown(takip, unsafe_allow_html=True)    
+  
  st.title('Easy Inventory Planner Guide')
  biry= f'<p>It is an easy-to-use application. Get upload files ready, upload files and generate analyses!</br>- Predictability Analysis </br>\
  - Inventory Planner </br>- Zero Sales Analysis </br> For more information check "About Analyses" Page <p>'
@@ -545,7 +548,6 @@ elif yan_sayfa_secenek == 'Application Guide' :
   all files are uploaded. </br> - Check "About Analyses" page.'
  st.markdown(metin4,unsafe_allow_html=True)
 
- 
 
     
     
