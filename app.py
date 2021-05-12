@@ -544,7 +544,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
  st.markdown(metin4,unsafe_allow_html=True)
 
  
-takip= f'<head><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316651);</script><script async src="//static.getclicky.com/js"></script> </head>'
+takip= f'<head> <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script> <script async src="//static.getclicky.com/js"></script> </head>'
 st.markdown(takip, unsafe_allow_html=True) 
     
     
