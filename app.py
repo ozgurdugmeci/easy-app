@@ -548,9 +548,25 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
 
 
-takip= """ <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script>
-<script async src="//static.getclicky.com/js"></script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101316655ns.gif" /></p></noscript>
+takip= """ 
+<!-- Default Statcounter code for easy2
+https://share.streamlit.io/ozgurdugmeci/easy-app/main/app.py
+-->
+<script type="text/javascript">
+var sc_project=12528966; 
+var sc_invisible=0; 
+var sc_security="5fb071da"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12528966/0/5fb071da/0/"
+alt="Web Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 """
 #st.markdown(takip, unsafe_allow_html=True)  
