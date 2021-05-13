@@ -569,8 +569,8 @@ StatCounter"></a></div></noscript>
 <!-- End of Statcounter Code -->
 
 """
-st.markdown(takip, unsafe_allow_html=True)  
-
+#st.markdown(takip, unsafe_allow_html=True)  
+components.html(takip)
     
     
     
