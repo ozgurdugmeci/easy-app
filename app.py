@@ -570,7 +570,7 @@ StatCounter"></a></div></noscript>
 
 """
 #st.markdown(takip, unsafe_allow_html=True)  
-components.html(takip)
+components.html(takip,width=200, height=200)
     
     
     
