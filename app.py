@@ -547,7 +547,8 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
 
 
-takip= f'hey'
+takip= f'<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script> <script async src="//static.getclicky.com/js"></script>'
+
 
 st.markdown(takip, unsafe_allow_html=True)    
     
