@@ -551,7 +551,7 @@ takip= f'<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.pu
 
 
 st.markdown(takip, unsafe_allow_html=True)  
-components.html("<html><body><h1>Hello, World</h1></body></html>", width=200, height=200)
+st.components.html("<html><body><h1>Hello, World</h1></body></html>", width=200, height=200)
     
     
     
