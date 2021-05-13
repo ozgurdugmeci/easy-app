@@ -547,11 +547,11 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
 
 
-takip= f  '<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script>
+takip= f '<head>
+ <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101316655);</script>
  <script async src="//static.getclicky.com/js"></script>
- <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101316655ns.gif" /></p></noscript>
- </body>
- </html>'
+ </head>'
+
 st.markdown(takip, unsafe_allow_html=True)    
     
     
