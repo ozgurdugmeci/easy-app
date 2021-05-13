@@ -548,7 +548,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
 
 
-takip= """ <!-- Default Statcounter code for easy
+takip= """ <body> <!-- Default Statcounter code for easy
 https://share.streamlit.io/ozgurdugmeci/easy-app/main/app.py
 -->
 <script type="text/javascript">
@@ -566,7 +566,7 @@ target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/12528693/0/e4961abf/0/"
 alt="Web Analytics Made Easy -
 StatCounter"></a></div></noscript>
-<!-- End of Statcounter Code -->
+<!-- End of Statcounter Code --> </body>
 
 """
 #st.markdown(takip, unsafe_allow_html=True)  
