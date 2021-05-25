@@ -24,7 +24,7 @@ kilit2 = 0
 kilit3 = 0
 kilit4 = 0
 kilit5 = 0
-
+takip2='xx'
 
 st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
@@ -34,7 +34,7 @@ yan_sayfa_secenek = st.sidebar.radio(
 )
 
 if yan_sayfa_secenek == 'Uploading Files & Analyses' :
- takip= """ <!-- Default Statcounter code for easy-upload
+ takip2= """ <!-- Default Statcounter code for easy-upload
  https://share.streamlit.io/ozgurdugmeci/easy-app/main/app.py
  -->
  <script type="text/javascript">
@@ -54,7 +54,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  <!-- End of Statcounter Code -->
  """
  #st.markdown(takip, unsafe_allow_html=True)  
- components.html(takip,width=200, height=200)
+ components.html(takip2,width=200, height=200)
   
     
     
