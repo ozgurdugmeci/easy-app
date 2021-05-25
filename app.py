@@ -26,7 +26,6 @@ kilit4 = 0
 kilit5 = 0
 
 
-
 st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
@@ -35,7 +34,29 @@ yan_sayfa_secenek = st.sidebar.radio(
 )
 
 if yan_sayfa_secenek == 'Uploading Files & Analyses' :
-
+ takip= """
+ <!-- Default Statcounter code for easy-upload
+ https://github.com/ozgurdugmeci/easy-app/edit/main/app.py
+ -->
+ <script type="text/javascript">
+ var sc_project=12536003; 
+ var sc_invisible=1; 
+ var sc_security="888044ac"; 
+ </script>
+ <script type="text/javascript"
+ src="https://www.statcounter.com/counter/counter.js"
+ async></script>
+ <noscript><div class="statcounter"><a title="Web Analytics"
+ href="https://statcounter.com/" target="_blank"><img
+ class="statcounter"
+ src="https://c.statcounter.com/12536003/0/888044ac/1/"
+ alt="Web Analytics"></a></div></noscript>
+ <!-- End of Statcounter Code --> """
+ #st.markdown(takip, unsafe_allow_html=True)  
+ components.html(takip,width=200, height=200)
+  
+    
+    
  st.title("1- UPLOADING FILES")
  st.header('A- Upload Inventory File')
    
@@ -201,6 +222,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  uploaded_file5 = st.file_uploader("Select Sales80 File", type=['csv'])
  
  if uploaded_file5 :
+          
   
   df_sales80 = pd.read_csv(uploaded_file5, delimiter= ';')
   df_sales80=df_sales80.fillna(0)
