@@ -34,27 +34,6 @@ yan_sayfa_secenek = st.sidebar.radio(
 )
 
 if yan_sayfa_secenek == 'Uploading Files & Analyses' :
- takip2= """ <!-- Default Statcounter code for easy-upload
- https://share.streamlit.io/ozgurdugmeci/easy-app/main/app.py
- -->
- <script type="text/javascript">
- var sc_project=12536010; 
- var sc_invisible=1; 
- var sc_security="581ace82"; 
- </script>
- <script type="text/javascript"
- src="https://www.statcounter.com/counter/counter.js"
- async></script>
- <noscript><div class="statcounter"><a title="Web Analytics
- Made Easy - StatCounter" href="https://statcounter.com/"
- target="_blank"><img class="statcounter"
- src="https://c.statcounter.com/12536010/0/581ace82/1/"
- alt="Web Analytics Made Easy -
- StatCounter"></a></div></noscript>
- <!-- End of Statcounter Code -->
- """
- #st.markdown(takip, unsafe_allow_html=True)  
- components.html(takip2,width=200, height=200)
   
     
     
