@@ -531,10 +531,18 @@ elif yan_sayfa_secenek == 'Contact' :
 elif yan_sayfa_secenek == 'Application Guide' :
   
  st.title('Easy Inventory Planner Guide')
+    
+ 
+
  biry= f'<p>It is an easy-to-use application. Get upload files ready, upload files and generate analyses!</br>- Predictability Analysis </br>\
  - Inventory Planner </br>- Zero Sales Analysis </br> For more information check "About Analyses" Page <p>'
  
  st.markdown(biry,unsafe_allow_html=True)
+    
+ htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model3.jpg'
+ #image0 = Image.open(htp6)
+ st.image(htp0, caption= 'Model', width=800)
+ 
  urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
  st.markdown(urly,unsafe_allow_html=True)
  st.subheader('A- Getting uploading files ready')
