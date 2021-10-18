@@ -539,12 +539,15 @@ elif yan_sayfa_secenek == 'Application Guide' :
  
  st.markdown(biry,unsafe_allow_html=True)
     
- htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model3.jpg'
- #image0 = Image.open(htp6)
- st.image(htp0, caption= 'Model', width=800)
+ 
  
  urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
  st.markdown(urly,unsafe_allow_html=True)
+
+ htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model3.jpg'
+ #image0 = Image.open(htp6)
+ st.image(htp0, caption= 'Model', width=800)
+
  st.subheader('A- Getting uploading files ready')
  metin2= f'<p> - Application only accepts csv file format.</br> - Go to "Getting Upload Files Ready" page and download empty csv files. </br>- There are 5 csv files to download.\
   </br> - Paste related data to empty csv files.  </br> - Be sure column names exist on the csv files. </br>- On each csv file  product number information \
