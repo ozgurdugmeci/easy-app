@@ -233,161 +233,162 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  else :
   warning5= f'<p style="color:red;">Sales80 file has not been uploaded.</p>'
   st.markdown(warning5, unsafe_allow_html=True)
- #if (a != 0 and a2 !=0 and  a3!=0  and a4 != 0  and a5!=0) :
- st.title('2- ANALYSES')
- 
- df_inv = pd.pivot_table(df_inv, values=['Inventory_Quantity'], index=['Product_Number'],  aggfunc=np.sum)
- df_inv = df_inv.reset_index()                #index to columns
- 
- df_sales20 = pd.pivot_table(df_sales20, values=['Sales20'], index=['Product_Number'],  aggfunc=np.sum)
- df_sales20 = df_sales20.reset_index()                #index to columns
-
- df_sales40 = pd.pivot_table(df_sales40, values=['Sales40'], index=['Product_Number'],  aggfunc=np.sum)
- df_sales40 = df_sales40.reset_index()                #index to columns
-
- 
- df_sales60 = pd.pivot_table(df_sales60, values=['Sales60'], index=['Product_Number'],  aggfunc=np.sum)
- df_sales60 = df_sales60.reset_index()                #index to columns
-
- 
- df_sales80 = pd.pivot_table(df_sales80, values=['Sales80'], index=['Product_Number'],  aggfunc=np.sum)
- df_sales80 = df_sales80.reset_index()                #index to columns
-
- df= pd.merge(df_inv, df_sales20, on=['Product_Number'], how='outer')
-   
- df= pd.merge(df, df_sales40, on=['Product_Number'], how='outer')
- 
- df= pd.merge(df, df_sales60, on=['Product_Number'], how='outer')
- df= pd.merge(df, df_sales80, on=['Product_Number'], how='outer')
- df=df.fillna(0)
- df_sfr= df.loc[df['Sales80']==0].copy()
-
- df_analiz= df.loc[df['Sales80'] > 0].copy()
- 
- df_analiz['Range1']= df_analiz.Sales20
- df_analiz['Range2']= df_analiz.Sales40-df_analiz.Sales20
- df_analiz['Range3']= df_analiz.Sales60-df_analiz.Sales40
- df_analiz['Range4']= df_analiz.Sales80-df_analiz.Sales60
- 
- df_analiz['ktsy']= (df_analiz[['Range1','Range2','Range3','Range4']].std(axis=1))/(df_analiz[['Range1','Range2','Range3','Range4']].mean(axis=1))
- 
- kosul=[
-
- (df_analiz['ktsy']>= 0) & (df_analiz['ktsy']< 0.36), 
- (df_analiz['ktsy']>= 0.36) & (df_analiz['ktsy']< 0.70),
- (df_analiz['ktsy']>= 0.70 )& (df_analiz['ktsy']< 1.26),
- (df_analiz['ktsy']>= 1.26) ]
- 
- secenek=[4,3,2,1]
- df_analiz['Category']= np.select(kosul,secenek,default=4)
-
- df_hedef= df_analiz[['Category','Range1','Range2','Range3','Range4']]
-
- hedef=df_hedef.values.tolist()
- kuple=[]
- tops=[]
- 
- 
- 
- for i in hedef:
-  bol=int(i[0])
-  #print(bol)
-  i.remove(i[0])
-  kuple= sorted(i,reverse=True)
- 
-  tops.append(sum(kuple[0:bol])/bol)
-  kuple=[]
-
- df_analiz['Predicted_Sales_Speed']= tops
- 
- df_analiz['Stock_Cover'] = (df_analiz.Inventory_Quantity)/(df_analiz.Predicted_Sales_Speed/20)
- 
- 
- df_analiz['Category']=df_analiz['Category'].replace(1,'New Product1')
- df_analiz['Category']=df_analiz['Category'].replace(2,'New Product2')
- df_analiz['Category']=df_analiz['Category'].replace(3,'Predictable Sales')
- df_analiz['Category']=df_analiz['Category'].replace(4,'Very Predictable Sales')
-
- df_analiz.loc[((df_analiz['Range4'] != 0) & (df_analiz['Category'] == 'New Product1')), 'Category'] = 'Unpredictable Sales'
- 
- df_analiz.loc[((df_analiz['Range1'] == 0) & (df_analiz['Category'] == 'New Product1')), 'Category'] = 'Unpredictable Sales'
-
- df_analiz.loc[((df_analiz['Range1'] != 0) & (df_analiz['Category'] == 'New Product1') & (df_analiz['Range3'] != 0) ), 'Category'] = 'Unpredictable Sales' 
- 
- df_analiz.loc[((df_analiz['Range4'] != 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
- 
- df_analiz.loc[((df_analiz['Range2'] == 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
- 
- df_analiz.loc[((df_analiz['Range1'] == 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
- 
- df_analiz.loc[((df_analiz['Range1'] <df_analiz['Range2'] ) & (df_analiz['Category'] == 'Predictable Sales') & (df_analiz['Range1'] <df_analiz['Range3'] ) &
-  (df_analiz['Range1'] <df_analiz['Range4'] )), 'Category'] = 'Decreasing Sales' 
-
- df_analiz.loc[((df_analiz['Range3']> df_analiz['Range1']) & (df_analiz['Range2']> df_analiz['Range1']) & 
-  (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Decreasing Sales'
-
- df_analiz=df_analiz.sort_values(by='Predicted_Sales_Speed', ascending=False) 
- 
- df_analiz_download= df_analiz[['Product_Number','Inventory_Quantity','Sales20','Sales40','Sales60','Sales80','Category',
-  'Stock_Cover', 'Predicted_Sales_Speed']].copy()
- 
- df_analiz_download['Predicted_Sales_Speed']= df_analiz_download['Predicted_Sales_Speed'].round(0)
- df_analiz_download['Stock_Cover']= df_analiz_download['Stock_Cover'].round(0)
- 
- 
- 
-
- df_analiz['Category']=df_analiz['Category'].replace('New Product1','New Products')
- df_analiz['Category']=df_analiz['Category'].replace('New Product2','New Products')
- 
- df_analiz['Category']=df_analiz['Category'].replace('Very Predictable Sales','Predictable Sales')
+if (a != 0 and a2 !=0 and  a3!=0  and a4 != 0  and a5!=0) :
+  st.title('2- ANALYSES')
   
- df_tutarlk = pd.pivot_table(df_analiz, values=['Product_Number'], index=['Category'],  aggfunc='count' )
- df_tutarlk = df_tutarlk.reset_index()                #index to columns
+  df_inv = pd.pivot_table(df_inv, values=['Inventory_Quantity'], index=['Product_Number'],  aggfunc=np.sum)
+  df_inv = df_inv.reset_index()                #index to columns
+  
+  df_sales20 = pd.pivot_table(df_sales20, values=['Sales20'], index=['Product_Number'],  aggfunc=np.sum)
+  df_sales20 = df_sales20.reset_index()                #index to columns
+  
+  df_sales40 = pd.pivot_table(df_sales40, values=['Sales40'], index=['Product_Number'],  aggfunc=np.sum)
+  df_sales40 = df_sales40.reset_index()                #index to columns
+  
+  
+  df_sales60 = pd.pivot_table(df_sales60, values=['Sales60'], index=['Product_Number'],  aggfunc=np.sum)
+  df_sales60 = df_sales60.reset_index()                #index to columns
+  
+  
+  df_sales80 = pd.pivot_table(df_sales80, values=['Sales80'], index=['Product_Number'],  aggfunc=np.sum)
+  df_sales80 = df_sales80.reset_index()                #index to columns
+  
+  df= pd.merge(df_inv, df_sales20, on=['Product_Number'], how='outer')
+    
+  df= pd.merge(df, df_sales40, on=['Product_Number'], how='outer')
+  
+  df= pd.merge(df, df_sales60, on=['Product_Number'], how='outer')
+  df= pd.merge(df, df_sales80, on=['Product_Number'], how='outer')
+  df=df.fillna(0)
+  df_sfr= df.loc[df['Sales80']==0].copy()
+  
+  df_analiz= df.loc[df['Sales80'] > 0].copy()
+  
+  df_analiz['Range1']= df_analiz.Sales20
+  df_analiz['Range2']= df_analiz.Sales40-df_analiz.Sales20
+  df_analiz['Range3']= df_analiz.Sales60-df_analiz.Sales40
+  df_analiz['Range4']= df_analiz.Sales80-df_analiz.Sales60
+  
+  df_analiz['ktsy']= (df_analiz[['Range1','Range2','Range3','Range4']].std(axis=1))/(df_analiz[['Range1','Range2','Range3','Range4']].mean(axis=1))
+  
+  kosul=[
+  
+  (df_analiz['ktsy']>= 0) & (df_analiz['ktsy']< 0.36), 
+  (df_analiz['ktsy']>= 0.36) & (df_analiz['ktsy']< 0.70),
+  (df_analiz['ktsy']>= 0.70 )& (df_analiz['ktsy']< 1.26),
+  (df_analiz['ktsy']>= 1.26) ]
+  
+  secenek=[4,3,2,1]
+  df_analiz['Category']= np.select(kosul,secenek,default=4)
+  
+  df_hedef= df_analiz[['Category','Range1','Range2','Range3','Range4']]
+  
+  hedef=df_hedef.values.tolist()
+  kuple=[]
+  tops=[]
+  
+  
+  
+  for i in hedef:
+   bol=int(i[0])
+   #print(bol)
+   i.remove(i[0])
+   kuple= sorted(i,reverse=True)
+  
+   tops.append(sum(kuple[0:bol])/bol)
+   kuple=[]
+  
+  df_analiz['Predicted_Sales_Speed']= tops
+  
+  df_analiz['Stock_Cover'] = (df_analiz.Inventory_Quantity)/(df_analiz.Predicted_Sales_Speed/20)
+  
+  
+  df_analiz['Category']=df_analiz['Category'].replace(1,'New Product1')
+  df_analiz['Category']=df_analiz['Category'].replace(2,'New Product2')
+  df_analiz['Category']=df_analiz['Category'].replace(3,'Predictable Sales')
+  df_analiz['Category']=df_analiz['Category'].replace(4,'Very Predictable Sales')
+  
+  df_analiz.loc[((df_analiz['Range4'] != 0) & (df_analiz['Category'] == 'New Product1')), 'Category'] = 'Unpredictable Sales'
+  
+  df_analiz.loc[((df_analiz['Range1'] == 0) & (df_analiz['Category'] == 'New Product1')), 'Category'] = 'Unpredictable Sales'
+  
+  df_analiz.loc[((df_analiz['Range1'] != 0) & (df_analiz['Category'] == 'New Product1') & (df_analiz['Range3'] != 0) ), 'Category'] = 'Unpredictable Sales' 
+  
+  df_analiz.loc[((df_analiz['Range4'] != 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
+  
+  df_analiz.loc[((df_analiz['Range2'] == 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
+  
+  df_analiz.loc[((df_analiz['Range1'] == 0) & (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Unpredictable Sales'
+  
+  df_analiz.loc[((df_analiz['Range1'] <df_analiz['Range2'] ) & (df_analiz['Category'] == 'Predictable Sales') & (df_analiz['Range1'] <df_analiz['Range3'] ) &
+   (df_analiz['Range1'] <df_analiz['Range4'] )), 'Category'] = 'Decreasing Sales' 
+  
+  df_analiz.loc[((df_analiz['Range3']> df_analiz['Range1']) & (df_analiz['Range2']> df_analiz['Range1']) & 
+   (df_analiz['Category'] == 'New Product2')), 'Category'] = 'Decreasing Sales'
+  
+  df_analiz=df_analiz.sort_values(by='Predicted_Sales_Speed', ascending=False) 
+  
+  df_analiz_download= df_analiz[['Product_Number','Inventory_Quantity','Sales20','Sales40','Sales60','Sales80','Category',
+   'Stock_Cover', 'Predicted_Sales_Speed']].copy()
+  
+  df_analiz_download['Predicted_Sales_Speed']= df_analiz_download['Predicted_Sales_Speed'].round(0)
+  df_analiz_download['Stock_Cover']= df_analiz_download['Stock_Cover'].round(0)
+  
+  
+  
+  
+  df_analiz['Category']=df_analiz['Category'].replace('New Product1','New Products')
+  df_analiz['Category']=df_analiz['Category'].replace('New Product2','New Products')
+  
+  df_analiz['Category']=df_analiz['Category'].replace('Very Predictable Sales','Predictable Sales')
+   
+  df_tutarlk = pd.pivot_table(df_analiz, values=['Product_Number'], index=['Category'],  aggfunc='count' )
+  df_tutarlk = df_tutarlk.reset_index()                #index to columns
+  
+  df_tutarlk['Kum']=  df_tutarlk['Product_Number'].sum()
+  total_product= df_tutarlk['Product_Number'].sum()
+  df_tutarlk['Ratio']= df_tutarlk.Product_Number / df_tutarlk.Kum
+  
+  df_tutarlk.drop(['Kum'], inplace=True, axis=1)
+  df_tutarlk.columns= ['Category','Product_Count','Ratio']
+  df_tutarlk=df_tutarlk.sort_values(by='Ratio', ascending=False)
+  total_product= str(total_product) + ' products analysed'
+  #df.style.format("{:.2%}")
+  #df.style.format({'B': "{:0<4.0f}", 'D': '{:+.2f}'})
+  df_tutarlk= df_tutarlk.style.format({'Ratio': '{:.0%}'})
+  st.info('A- Predictability Analysis') 
+  total_product
+  df_tutarlk
+  'Predictability Analysis shows the quality of inventory management. The higher percentage of the "Predictable Sales" ratio indicates the good quality of the inventory management.'
+  #download_data
+  st.info('B- Inventory Planner')
+  'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
+  'Predicted_Sales_Speed : Estimated 20-day sale values '
+  
+  isim= 'Analsed_Data.csv'
+  indir = df_analiz_download.to_csv(index=False)
+  b64 = base64.b64encode(indir.encode(encoding='ISO-8859-1')).decode(encoding='ISO-8859-1')  # some strings
+  linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
+  st.markdown(linko_final, unsafe_allow_html=True)  
+  
+  df_analiz_show= df_analiz[['Product_Number','Inventory_Quantity','Category','Stock_Cover', 'Predicted_Sales_Speed']].copy()
+  
+  df_analiz_show['Predicted_Sales_Speed']= df_analiz_show['Predicted_Sales_Speed'].round(0)
+  df_analiz_show['Stock_Cover']= df_analiz_show['Stock_Cover'].round(0)
+  
+  
+  
+  df_analiz_show
+  
+  
+  if len(df_sfr)>0:
+   st.info('C- Zero Sales') 
+   'The table shows the products which have no sales in last 80 days.'
+   df_sfr   
+ 
+ else:
+  st.info('Once uploading is complete, analyses will automaticaly start')
 
- df_tutarlk['Kum']=  df_tutarlk['Product_Number'].sum()
- total_product= df_tutarlk['Product_Number'].sum()
- df_tutarlk['Ratio']= df_tutarlk.Product_Number / df_tutarlk.Kum
- 
- df_tutarlk.drop(['Kum'], inplace=True, axis=1)
- df_tutarlk.columns= ['Category','Product_Count','Ratio']
- df_tutarlk=df_tutarlk.sort_values(by='Ratio', ascending=False)
- total_product= str(total_product) + ' products analysed'
- #df.style.format("{:.2%}")
- #df.style.format({'B': "{:0<4.0f}", 'D': '{:+.2f}'})
- df_tutarlk= df_tutarlk.style.format({'Ratio': '{:.0%}'})
- st.info('A- Predictability Analysis') 
- total_product
- df_tutarlk
- 'Predictability Analysis shows the quality of inventory management. The higher percentage of the "Predictable Sales" ratio indicates the good quality of the inventory management.'
- #download_data
- st.info('B- Inventory Planner')
- 'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
- 'Predicted_Sales_Speed : Estimated 20-day sale values '
- 
- isim= 'Analsed_Data.csv'
- indir = df_analiz_download.to_csv(index=False)
- b64 = base64.b64encode(indir.encode(encoding='ISO-8859-1')).decode(encoding='ISO-8859-1')  # some strings
- linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
- st.markdown(linko_final, unsafe_allow_html=True)  
- 
- df_analiz_show= df_analiz[['Product_Number','Inventory_Quantity','Category','Stock_Cover', 'Predicted_Sales_Speed']].copy()
- 
- df_analiz_show['Predicted_Sales_Speed']= df_analiz_show['Predicted_Sales_Speed'].round(0)
- df_analiz_show['Stock_Cover']= df_analiz_show['Stock_Cover'].round(0)
- 
- 
- 
- df_analiz_show
- 
- 
- if len(df_sfr)>0:
-  st.info('C- Zero Sales') 
-  'The table shows the products which have no sales in last 80 days.'
-  df_sfr   
- 
- #else:
- st.info('Once uploading is complete, analyses will automaticaly start')
 
 
 
