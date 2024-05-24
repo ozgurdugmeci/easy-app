@@ -546,7 +546,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload' :
    df['Sub-Category'] = df['Sub-Category'].astype('str')
    df_dummx= df.copy() 
    df_dummx= df_dummx.astype(str)
-     
+   'hey'  
    df['Product'].fillna('-',inplace=True)
    df['Category'].fillna('-',inplace=True)
    df['Sub-Category'].fillna('-',inplace=True)
