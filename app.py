@@ -233,7 +233,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  else :
   warning5= f'<p style="color:red;">Sales80 file has not been uploaded.</p>'
   st.markdown(warning5, unsafe_allow_html=True)
-if (a != 0 and a2 !=0 and  a3!=0  and a4 != 0  and a5!=0) :
+ if (a != 0 and a2 !=0 and  a3!=0  and a4 != 0  and a5!=0) :
   st.title('2- ANALYSES')
   
   df_inv = pd.pivot_table(df_inv, values=['Inventory_Quantity'], index=['Product_Number'],  aggfunc=np.sum)
