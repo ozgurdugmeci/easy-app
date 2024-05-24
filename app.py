@@ -73,11 +73,11 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
   
   
   if a == 0 :
-  st.warning('Uploaded file is empty. Upload file again.')
+   st.warning('Uploaded file is empty. Upload file again.')
     
   #except:
   #st.warning('Check the data you uploaded. There might be string value on Column B.')  
- else :
+  else :
   warning1= f'<p style="color:red;">Inventory file has not been uploaded.</p>'
   st.markdown(warning1, unsafe_allow_html=True)  
 
