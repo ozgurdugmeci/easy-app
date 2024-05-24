@@ -59,24 +59,24 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
   
   df_inv.columns=['Product_Number','Inventory_Quantity']
   df_inv['Inventory_Quantity']=df_inv['Inventory_Quantity'].replace(regex=[','], value='.')
-  try:
-   df_inv['Inventory_Quantity']=df_inv['Inventory_Quantity'].astype(float)
+  #try:
+  df_inv['Inventory_Quantity']=df_inv['Inventory_Quantity'].astype(float)
    
-   st.dataframe(df_inv.head(3))
-   uploaded= str(len(df_inv)) + " rows uploaded."
-   uploaded
+  st.dataframe(df_inv.head(3))
+  uploaded= str(len(df_inv)) + " rows uploaded."
+  uploaded
    
-   #st.markdown(sd, unsafe_allow_html=True) 
-   a=df_inv['Inventory_Quantity'].sum()
-   'Total Inventory_Quantity'
-   a
+  #st.markdown(sd, unsafe_allow_html=True) 
+  a=df_inv['Inventory_Quantity'].sum()
+  'Total Inventory_Quantity'
+  a
   
   
-   if a == 0 :
-    st.warning('Uploaded file is empty. Upload file again.')
+  if a == 0 :
+  st.warning('Uploaded file is empty. Upload file again.')
     
-  except:
-    st.warning('Check the data you uploaded. There might be string value on Column B.')  
+  #except:
+  #st.warning('Check the data you uploaded. There might be string value on Column B.')  
  else :
   warning1= f'<p style="color:red;">Inventory file has not been uploaded.</p>'
   st.markdown(warning1, unsafe_allow_html=True)  
