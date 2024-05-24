@@ -557,8 +557,8 @@ elif yan_sayfa_secenek == 'Direct Excel Upload' :
   df['Inventory'].fillna(0,inplace=True)
   #st.dataframe(df_dummx) 
   #except:
-  'Dosya yüklemede hata'
-  'Excel dosyayı kontrol edin.'
+  #'Dosya yüklemede hata'
+  #'Excel dosyayı kontrol edin.'
    
   #st.stop() 
   
@@ -706,7 +706,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload' :
    df_sfr2=df_sfr.astype(str).copy()
    #st.dataframe(df_sfr2)   
   #except:
-  'Excel dosya sütunlarını kontrol edin.'
+  #'Excel dosya sütunlarını kontrol edin.'
  
  
  
