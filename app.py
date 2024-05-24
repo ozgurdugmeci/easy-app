@@ -30,7 +30,7 @@ st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
-    ('Application Guide', 'About Analyses', 'Getting Upload Files Ready','Direct Excel Upload', 'Uploading Files & Analyses','Contact')
+    ('Application Guide', 'About Analyses', 'Getting Upload Files Ready','Direct Excel Upload & Analyses', 'Uploading Files & Analyses','Contact')
 )
 
 if yan_sayfa_secenek == 'Uploading Files & Analyses' :
@@ -530,7 +530,7 @@ elif yan_sayfa_secenek == 'Contact' :
  st.markdown(mail_b,unsafe_allow_html=True)
  st.markdown(info_link,unsafe_allow_html=True)
 
-elif yan_sayfa_secenek == 'Direct Excel Upload' :
+elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
 
  
  st.info('Once excel file is uploaded, analyses will automatically start.')
