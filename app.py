@@ -78,8 +78,8 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
   #except:
   #st.warning('Check the data you uploaded. There might be string value on Column B.')  
   else :
-  warning1= f'<p style="color:red;">Inventory file has not been uploaded.</p>'
-  st.markdown(warning1, unsafe_allow_html=True)  
+   warning1= f'<p style="color:red;">Inventory file has not been uploaded.</p>'
+   st.markdown(warning1, unsafe_allow_html=True)  
 
  
  st.header('B- Upload Sales20 File')
