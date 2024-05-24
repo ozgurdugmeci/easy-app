@@ -555,7 +555,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload' :
   df['Sales63'].fillna(0,inplace=True)
   df['Sales84'].fillna(0,inplace=True)
   df['Inventory'].fillna(0,inplace=True)
-  st.dataframe(df_dummx) 
+  #st.dataframe(df_dummx) 
   #except:
   'Dosya yüklemede hata'
   'Excel dosyayı kontrol edin.'
