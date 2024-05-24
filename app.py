@@ -535,11 +535,11 @@ elif yan_sayfa_secenek == 'Direct Excel Upload' :
  st.write('Column order in excel file must be :')
  rowy   
  st.set_option('deprecation.showfileUploaderEncoding', False)
- uploaded_file = st.file_uploader("Select Excel File To Upload", type=['xlsx'])
+ uploaded_file_x = st.file_uploader("Select Excel File To Upload", type=['xlsx'])
  
- if uploaded_file :
+ if uploaded_file_x :
   try:
-   df = pd.read_excel(uploaded_file)
+   df = pd.read_excel(uploaded_file_x)
    df.columns=['Product','Category','Sub-Category','Sales21','Sales42','Sales63','Sales84','Inventory']
    df['Product'] = df['Product'].astype('str')
    df['Category'] = df['Category'].astype('str')
