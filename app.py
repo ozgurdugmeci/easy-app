@@ -531,7 +531,7 @@ elif yan_sayfa_secenek == 'Contact' :
  st.markdown(info_link,unsafe_allow_html=True)
 
 elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
-
+ st.title("1- One File Upload")
  
  st.info('Once excel file is uploaded, analyses will automatically start.')
  rowy=[]
