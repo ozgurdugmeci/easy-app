@@ -66,7 +66,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
    uploaded= str(len(df_inv)) + " rows uploaded."
    uploaded
    
-   st.markdown(sd, unsafe_allow_html=True) 
+   #st.markdown(sd, unsafe_allow_html=True) 
    a=df_inv['Inventory_Quantity'].sum()
    'Total Inventory_Quantity'
    a
