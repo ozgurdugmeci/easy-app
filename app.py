@@ -401,6 +401,9 @@ elif yan_sayfa_secenek == 'Getting Upload Files Ready' :
  st.title('1- Inventory File')
  urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
  st.markdown(urly_download,unsafe_allow_html=True)
+ urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
+ st.markdown(urly_download_new,unsafe_allow_html=True)
+   
  linko= f'<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/u/0/uc?id=1bfX9Em80nVK19sCVlpco7sKx7wATOI6K&export=download">Download Inventory_.csv.</a>'  
  'Use the link down to download empty "Inventory_.CSV" file.'
  st.markdown(linko, unsafe_allow_html=True)  
@@ -534,6 +537,8 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  st.title("1- One File Upload")
  
  st.info('Once excel file is uploaded, analyses will automatically start.')
+ urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
+ st.markdown(urly_download_new,unsafe_allow_html=True)
  rowy=[]
  "Upload an excel file considering the column names below."
  
@@ -685,7 +690,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
    #download_data
    st.info('B- Inventory Planner')
    'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
-   'Predicted_Sales : Estimated 30-day sale values '
+   'Predicted_Sales : Estimated 21-day sale values '
     
    isim= 'Analsed_Data.csv'
    indir = df_analiz_download.to_csv(index=False)
