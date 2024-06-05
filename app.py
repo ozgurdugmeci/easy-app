@@ -363,7 +363,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
   #download_data
   st.info('B- Inventory Planner')
   'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
-  'Predicted_Sales_Speed : Estimated 20-day sale values '
+  'Predicted_Sales_Speed : Estimated 30-day sale values '
   
   isim= 'Analsed_Data.csv'
   indir = df_analiz_download.to_csv(index=False)
