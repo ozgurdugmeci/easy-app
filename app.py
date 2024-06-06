@@ -362,7 +362,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
   'Predictability Analysis shows the quality of inventory management. The higher percentage of the "Predictable Sales" ratio indicates the good quality of the inventory management.'
   #download_data
   st.info('B- Inventory Planner')
-  'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
+  'Stock_Cover : The number of days until a product to be out of stock with the predicted sales speed.'
   'Predicted_Sales_Speed : Estimated 30-day sale values '
   
   isim= 'Analsed_Data.csv'
@@ -689,7 +689,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
    'Predictability Analysis shows the quality of inventory management. The higher percentage of the "Predictable Sales" ratio indicates the good quality of the inventory management.'
    #download_data
    st.info('B- Inventory Planner')
-   'Stock_Cover : The number of days until a product will be out of stock with the predicted sales speed.'
+   'Stock_Cover : The number of days until a product to be out of stock with the predicted sales speed.'
    'Predicted_Sales : Estimated 30-day sale values '
     
    isim= 'Analsed_Data.csv'
