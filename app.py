@@ -33,7 +33,7 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   
     
     
- st.title("1- UPLOADING FILES")
+ st.title("1- UPLOADING CSV FILES")
  st.header('A- Upload Inventory File')
    
  
