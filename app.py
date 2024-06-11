@@ -10,10 +10,6 @@ from io import BytesIO
 from datetime import datetime
 from PIL import Image
 
-
-
-
-
 a = 0
 a2 = 0
 a3 = 0
@@ -728,8 +724,10 @@ elif yan_sayfa_secenek == 'Application Guide' :
     
  
 
- biry= f'<p>It is an easy-to-use application. Get upload files ready, upload files and generate analyses!</br>- Predictability Analysis </br>\
- - Inventory Planner </br>- Zero Sales Analysis </br> For more information check "About Analyses" Page <p>'
+ biry= f'<p>It is an easy-to-use and smart way to manage your inventory. <br> \
+  This app uses an unsupervised machine learning model to analyze your sales and stock data, calculating the sales speed for each product. <br> This helps you estimate \
+  how long your stock will last. With Easy Inventory Planner, you can easily keep track of your inventory levels, predict future needs, and avoid running out or having \
+  too much stock. The app's simple and intuitive design makes it easy to use, helping you make better decisions and keep your business running smoothly.  <p>'
  
  st.markdown(biry,unsafe_allow_html=True)
     
