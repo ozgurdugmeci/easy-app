@@ -753,7 +753,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
  st.markdown(metin4,unsafe_allow_html=True)
 
  st.subheader('C-Direct Excel Upload & Analyses')
- metin_excel= f' <p> - Prepare excel file with the correct order od columns.</br> - Upload excel file. </p>
+ metin_excel= f' <p> - Prepare excel file with the correct order od columns.</br> - Upload excel file. </p>'
  st.markdown(metin_excel,unsafe_allow_html=True)
 takip= """ 
 <!-- Default Statcounter code for easy2
