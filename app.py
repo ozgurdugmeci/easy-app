@@ -26,7 +26,7 @@ st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
-    ('Application Guide', 'About Analyses', 'Getting CSV Files Ready','Direct Excel Upload & Analyses', 'Uploading CSV Files & Analyses','Contact')
+    ('Application Guide', 'About Analyses','Direct Excel Upload & Analyses', 'Getting CSV Files Ready', 'Uploading CSV Files & Analyses','Contact')
 )
 
 if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
