@@ -26,7 +26,7 @@ st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
-    ('Application Guide', 'About Analyses', 'Getting Upload Files Ready','Direct Excel Upload & Analyses', 'Uploading Files & Analyses','Contact')
+    ('Application Guide', 'About Analyses', 'Getting CSV Files Ready','Direct Excel Upload & Analyses', 'Uploading CSV Files & Analyses','Contact')
 )
 
 if yan_sayfa_secenek == 'Uploading Files & Analyses' :
@@ -392,7 +392,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
 
 
 #GETTING DOWNLOAD FILES READY
-elif yan_sayfa_secenek == 'Getting Upload Files Ready' :
+elif yan_sayfa_secenek == 'Getting CSV Files Ready' :
  #STOKLAR
  st.title('1- Inventory File')
  urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
@@ -742,7 +742,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
  st.image(htp0, caption= 'Model', width=800)
 
  st.subheader('A- Getting uploading files ready (Partial Upload)')
- metin2= f'<p> - Application only accepts csv file format.</br> - Go to "Getting Upload Files Ready" page and download empty csv files. </br>- There are 5 csv files to download.\
+ metin2= f'<p> - This part only accepts csv file format.</br> - Go to "Getting CSV Files Ready" page and download empty csv files. </br>- There are 5 csv files to download.\
   </br> - Paste related data to empty csv files.  </br> - Be sure column names exist on the csv files. </br>- On each csv file  product number information \
   has to be on column A.</br> - Quantity information has to be on column B. </br> - The data pasted on other columns, other than column A or column B, causes error.</p>'
  st.markdown(metin2,unsafe_allow_html=True)
