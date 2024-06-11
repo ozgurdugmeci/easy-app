@@ -37,7 +37,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
  st.header('A- Upload Inventory File')
    
  
- urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
+ urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
  st.markdown(urly_upload,unsafe_allow_html=True)
  st.info('Characters on upload files other than Unicode Standard can cause error. ')   
 
@@ -395,7 +395,7 @@ if yan_sayfa_secenek == 'Uploading Files & Analyses' :
 elif yan_sayfa_secenek == 'Getting Upload Files Ready' :
  #STOKLAR
  st.title('1- Inventory File')
- urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
+ urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
  st.markdown(urly_download,unsafe_allow_html=True)
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
@@ -733,7 +733,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
     
  
  
- urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch how to use easy inventory planner app.</a>'
+ urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
  st.markdown(urly,unsafe_allow_html=True)
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
