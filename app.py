@@ -37,7 +37,7 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
  st.header('A- Upload Inventory File')
    
  
- urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
+ urly_upload= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch csv upload.</a>'
  st.markdown(urly_upload,unsafe_allow_html=True)
  st.info('Characters on upload files other than Unicode Standard can cause error. ')   
 
@@ -395,9 +395,9 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
 elif yan_sayfa_secenek == 'Getting CSV Files Ready' :
  #STOKLAR
  st.title('1- Inventory File')
- urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
+ urly_download= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch csv upload.</a>'
  st.markdown(urly_download,unsafe_allow_html=True)
- urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
+ urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
    
  linko= f'<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/u/0/uc?id=1bfX9Em80nVK19sCVlpco7sKx7wATOI6K&export=download">Download Inventory_.csv.</a>'  
@@ -533,7 +533,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  st.title("1- One File Upload")
  
  st.info('Once excel file is uploaded, analyses will automatically start.')
- urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
+ urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
  rowy=[]
  "Upload an excel file considering the column names below."
@@ -733,9 +733,9 @@ elif yan_sayfa_secenek == 'Application Guide' :
     
  
  
- urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch partial upload.</a>'
+ urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch csv upload.</a>'
  st.markdown(urly,unsafe_allow_html=True)
- urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use one-file upload.</a>'
+ urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to use excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
  htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model3.jpg'
  #image0 = Image.open(htp6)
