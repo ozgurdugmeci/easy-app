@@ -29,7 +29,7 @@ yan_sayfa_secenek = st.sidebar.radio(
     ('Application Guide', 'About Analyses', 'Getting CSV Files Ready','Direct Excel Upload & Analyses', 'Uploading CSV Files & Analyses','Contact')
 )
 
-if yan_sayfa_secenek == 'Uploading Files & Analyses' :
+if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   
     
     
