@@ -744,13 +744,13 @@ elif yan_sayfa_secenek == 'Application Guide' :
  #image0 = Image.open(htp6)
  st.image(htp0, caption= 'Model', width=800)
 
- st.subheader('A- Getting uploading files ready (Partial Upload)')
+ st.subheader('A- Getting csv files ready (Partial Upload)')
  metin2= f'<p> - This part only accepts csv file format.</br> - Go to "Getting CSV Files Ready" page and download empty csv files. </br>- There are 5 csv files to download.\
   </br> - Paste related data to empty csv files.  </br> - Be sure column names exist on the csv files. </br>- On each csv file  product number information \
   has to be on column A.</br> - Quantity information has to be on column B. </br> - The data pasted on other columns, other than column A or column B, causes error.</p>'
  st.markdown(metin2,unsafe_allow_html=True)
 
- st.subheader('B- Uploading Files & Analyses (Partial Uopload)')
+ st.subheader('B- Uploading CSV Files & Analyses (Partial Uopload)')
  metin4= f' <p> - There are upload spaces for each csv file.</br> - Drag and drop or simply browse and select the related csv file. </br> - Analyses will appear after\
   all files are uploaded. </br> - Check "About Analyses" page.'
  st.markdown(metin4,unsafe_allow_html=True)
