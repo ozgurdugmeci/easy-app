@@ -28,7 +28,7 @@ st.sidebar.header('Easy Inventory Planner')
 #with st.sidebar:
 #with st.echo():
 #st.text("Demand Planning Tool")
-st.sidebar.header('Content')
+#st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
     ('Application Guide', 'About Analyses','Direct Excel Upload & Analyses', 'Getting CSV Files Ready', 'Uploading CSV Files & Analyses','Contact')
