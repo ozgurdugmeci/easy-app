@@ -25,7 +25,7 @@ takip2='xx'
 st.sidebar.title('Easy Inventory Planner')
 with st.sidebar:
 #with st.echo():
- st.write("Demand Planning Tool.")
+ st.text("Demand Planning Tool.")
 st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
