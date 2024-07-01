@@ -725,7 +725,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  
 elif yan_sayfa_secenek == 'Application Guide' :
   
- st.title('Application Guide')
+ st.title('Demand Planning Application Guide')
     
  
 
