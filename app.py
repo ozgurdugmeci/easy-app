@@ -731,7 +731,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
  biry= f'<p>It is an easy-to-use and smart way to manage your inventory. <br> \
   This app uses an unsupervised machine learning model to analyze your sales and stock data, calculating the sales speed for each product. <br> This helps you estimate \
-  how long your stock will last. With Easy Inventory Planner, you can easily keep track of your inventory levels, predict future needs, and avoid running out or having \
+  how long your stock will last. With application, you can easily keep track of your inventory levels, predict future needs, and avoid running out or having \
   too much stock. The app is simple and intuitive design makes it easy to use, helping you make better decisions and keep your business running smoothly.  <p>'
  
  st.markdown(biry,unsafe_allow_html=True)
