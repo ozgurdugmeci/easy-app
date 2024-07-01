@@ -9,6 +9,9 @@ import base64
 from io import BytesIO
 from datetime import datetime
 from PIL import Image
+# https://drive.google.com/file/d/1IWkkEMTrNJr-jFW2SY6FeBs_LVSz1QGY/view?usp=drive_link
+#https://drive.google.com/u/0/uc?id=1bfX9Em80nVK19sCVlpco7sKx7wATOI6K&export=download"
+
 
 a = 0
 a2 = 0
