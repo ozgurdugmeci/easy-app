@@ -9,9 +9,6 @@ import base64
 from io import BytesIO
 from datetime import datetime
 from PIL import Image
-#https://drive.google.com/file/d/1IWkkEMTrNJr-jFW2SY6FeBs_LVSz1QGY/view?usp=drive_link
-#https://drive.google.com/u/0/uc?id=1bfX9Em80nVK19sCVlpco7sKx7wATOI6K&export=download"
-#https://drive.google.com/u/0/uc?id=1IWkkEMTrNJr-jFW2SY6FeBs_LVSz1QGY&export=download"
 
 a = 0
 a2 = 0
@@ -745,7 +742,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
  st.markdown(urly,unsafe_allow_html=True)
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
- htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model3.jpg'
+ htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
  #image0 = Image.open(htp6)
  st.image(htp0, caption= 'Model', width=800)
 
