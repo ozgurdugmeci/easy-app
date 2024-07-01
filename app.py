@@ -23,7 +23,7 @@ kilit5 = 0
 takip2='xx'
 st.set_page_config(page_title="Demand Planning")
 st.sidebar.title('Demand Planning Tool')
-st.sidebar.header('Easy Inventory Planner')
+#st.sidebar.header('Easy Inventory Planner')
 
 #with st.sidebar:
 #with st.echo():
