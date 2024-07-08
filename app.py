@@ -727,6 +727,9 @@ elif yan_sayfa_secenek == 'Application Guide' :
   
  st.title('Demand Planning Application Guide')
     
+ htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
+ #image0 = Image.open(htp6)
+ st.image(htp0, caption= 'Model', width=800)
  
 
  biry= f'<p>It is an easy-to-use and smart way to manage your inventory. <br> \
@@ -742,9 +745,6 @@ elif yan_sayfa_secenek == 'Application Guide' :
  st.markdown(urly,unsafe_allow_html=True)
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
- htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
- #image0 = Image.open(htp6)
- st.image(htp0, caption= 'Model', width=800)
 
  st.subheader('A- Getting csv files ready (Partial Upload)')
  metin2= f'<p> - This part only accepts csv file format.</br> - Go to "Getting CSV Files Ready" page and download empty csv files. </br>- There are 5 csv files to download.\
