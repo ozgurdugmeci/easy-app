@@ -729,7 +729,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
     
  htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
  #image0 = Image.open(htp6)
- st.image(htp0, caption= 'Model', width=800)
+ st.image(htp0, caption= 'Model', width=400)
  
 
  biry= f'<p>It is an easy-to-use and smart way to manage your inventory. <br> \
