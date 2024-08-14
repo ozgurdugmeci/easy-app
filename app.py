@@ -71,7 +71,7 @@ if yan_sayfa_secenek == 'About Analyses' :
 
  st.image(htp7, caption= 'Inventory Planner', width=800)
  planner= f'<p>This analysis gives the core insights to plan inventory. You can check the <b>"Stock_Cover" </b> values.  In other words, it shows the number of days until a product will be out of stock. \
- Thus necessary actions can be taken before a product quantity comes to a critical low level. <b>"Predicted_Sales_Speed"</b> is the estimated 20-day \
+ Thus necessary actions can be taken before a product quantity comes to a critical low level. <b>"Predicted_Sales_Speed"</b> is the estimated 30-day \
   sale values.  Analysing these values with the category information can help you in taking decisions.</p>'
  
  st.markdown(planner,unsafe_allow_html=True)
