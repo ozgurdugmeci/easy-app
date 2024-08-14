@@ -538,6 +538,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  st.title("1- One File Upload")
  
  st.info('Once excel file is uploaded, analyses will automatically start.')
+ but= st.button("Upload Test Data") 
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
  rowy=[]
@@ -549,9 +550,16 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  st.set_option('deprecation.showfileUploaderEncoding', False)
  uploaded_file_x = st.file_uploader("Select Excel File To Upload", type=['xlsx'])
  
- if uploaded_file_x :
+ if uploaded_file_x or but :
   try:
-   df = pd.read_excel(uploaded_file_x)
+   if uploadded: 
+    df = pd.read_excel(uploaded_file_x)
+   if but:
+    df = pd.read_csv('https://docs.google.com/spreadsheets/d/' + 
+                   '1xkaMB5vc_Jx5MqTc97ukyQgYOqFnGgNUQ7SP2FfQm_Q' +
+                   '/export?gid=0&format=csv',
+                   # Set first column as rownames in data frame
+                   index_col=0)  
    df.columns=['Product','Category','Sub-Category','Sales21','Sales42','Sales63','Sales84','Inventory']
    df['Product'] = df['Product'].astype('str')
    df['Category'] = df['Category'].astype('str')
