@@ -367,7 +367,7 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   'Predicted_Sales_Speed : Estimated 30-day sale values '
   
   isim = 'Analysed_Data.csv'
-  indir = df_analiz_download.to_csv(index=False)
+  indir = df_analiz.to_csv(index=False)
   b64 = base64.b64encode(indir.encode()).decode()  # use UTF-8 encoding
   linko_final = f'<a href="data:file/csv;base64,{b64}" download="{isim}">Download Analysed Data</a>'
   st.markdown(linko_final, unsafe_allow_html=True) 
