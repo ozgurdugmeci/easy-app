@@ -552,16 +552,14 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  
  if uploaded_file_x or but :
   try:
-   if uploadded_file_x: 
+   if uploaded_file_x: 
     df = pd.read_excel(uploaded_file_x)
    elif but:
     df = pd.read_csv('https://docs.google.com/spreadsheets/d/' + 
                    '1xkaMB5vc_Jx5MqTc97ukyQgYOqFnGgNUQ7SP2FfQm_Q' +
-                   '/export?gid=0&format=csv',
-                   # Set first column as rownames in data frame
-                   index_col=0) 
-    satr= len(df)
-    df
+                   '/export?gid=0&format=csv') 
+    
+    
    df.columns=['Product','Category','Sub-Category','Sales21','Sales42','Sales63','Sales84','Inventory']
    df['Product'] = df['Product'].astype('str')
    df['Category'] = df['Category'].astype('str')
