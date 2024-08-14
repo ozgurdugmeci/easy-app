@@ -701,17 +701,17 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
    'Stock_Cover : The number of days until a product to be out of stock with the predicted sales speed.'
    'Predicted_Sales : Estimated 30-day sale values '
    'Test excel'
-    isim = 'Analysed_Data.csv'
+   isim = 'Analysed_Data.csv'
 
-    # Convert DataFrame to CSV
-    csv_data = df_analiz_download.to_csv(index=False)
+   # Convert DataFrame to CSV
+   csv_data = df_analiz_download.to_csv(index=False)
 
-    # Encode CSV data to base64
-    b64 = base64.b64encode(csv_data.encode()).decode()
+   # Encode CSV data to base64
+   b64 = base64.b64encode(csv_data.encode()).decode()
 
-    # Create a download link
-    linko_final = f'<a href="data:file/csv;base64,{b64}" download="{isim}">Download Analysed Data</a>'
-    st.markdown(linko_final, unsafe_allow_html=True)
+   # Create a download link
+   linko_final = f'<a href="data:file/csv;base64,{b64}" download="{isim}">Download Analysed Data</a>'
+   st.markdown(linko_final, unsafe_allow_html=True)
     
    df_analiz_show= df_analiz[['Product','Category','Sub-Category','Inventory','Label','Stock_Cover', 'Predicted_Sales','Sales21','Sales42','Sales63','Sales84']].copy()
     
