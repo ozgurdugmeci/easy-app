@@ -31,7 +31,7 @@ st.sidebar.title('Demand Planning Tool')
 #st.sidebar.header('Content')
 yan_sayfa_secenek = st.sidebar.radio(
     '',
-    ('Application Guide', 'About Analyses','Direct Excel Upload & Analyses', 'Contact')
+    ('Application Guide', 'About Analyses','Excel Upload & Analyses', 'Contact')
 )
 
 
@@ -87,7 +87,7 @@ elif yan_sayfa_secenek == 'Contact' :
  st.markdown(mail_b,unsafe_allow_html=True)
  st.markdown(info_link,unsafe_allow_html=True)
 
-elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
+elif yan_sayfa_secenek == 'Excel Upload & Analyses' :
  st.title("1- One File Upload")
  
  st.info('Upload excel file or click the button below. Analyses will automatically start.')
@@ -310,7 +310,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
 
 
 
- st.subheader('Direct Excel Upload & Analyses')
+ st.subheader('Excel Upload & Analyses')
  metin_excel= f" <p> - Prepare excel file with the correct order of the columns.<br> - Upload excel file or simply click <b>Upload Test Data</b> button. </p>"
  st.markdown(metin_excel,unsafe_allow_html=True)
 takip= """ 
