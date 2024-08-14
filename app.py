@@ -552,7 +552,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  
  if uploaded_file_x or but :
   try:
-   if uploadded: 
+   if uploadded_file_x: 
     df = pd.read_excel(uploaded_file_x)
    elif but:
     df = pd.read_csv('https://docs.google.com/spreadsheets/d/' + 
