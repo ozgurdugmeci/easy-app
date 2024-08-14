@@ -723,7 +723,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
     'The table shows the products which have no sales in last 80 days.'
     df_sfr=df_sfr.reset_index(drop=True)
     df_sfr2=df_sfr.astype(str).copy()
-    st.dataframe(df_sfr2)   
+    #st.dataframe(df_sfr2)   
   except:
    'Excel dosya sütunlarını kontrol edin.'
  
