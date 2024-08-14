@@ -368,7 +368,7 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   
   isim = 'Analysed_Data.csv'
   indir = df_analiz.to_csv(index=False)
-  b64 = base64.b64encode(indir.encode()).decode()  # use UTF-8 encoding
+  b64 = base64.b64encode(indir.encode(encoding='utf-8')).decode(encoding='utf-8')  # some strings
   linko_final = f'<a href="data:file/csv;base64,{b64}" download="{isim}">Download Analysed Data</a>'
   st.markdown(linko_final, unsafe_allow_html=True) 
   
