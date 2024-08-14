@@ -379,7 +379,7 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   
   
   
-  df_analiz_show
+  st.dataframe(df_analiz_show)
   
   
   if len(df_sfr)>0:
