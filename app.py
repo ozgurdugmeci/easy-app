@@ -365,12 +365,12 @@ if yan_sayfa_secenek == 'Uploading CSV Files & Analyses' :
   st.info('B- Inventory Planner')
   'Stock_Cover : The number of days until a product to be out of stock with the predicted sales speed.'
   'Predicted_Sales_Speed : Estimated 30-day sale values '
-  
-  isim = 'Analysed_Data.csv'
-  indir = df_analiz.to_csv(index=False)
+  'Test'
+  isim= 'Analsed_Data.csv'
+  indir = df_analiz_download.to_csv(index=False)
   b64 = base64.b64encode(indir.encode(encoding='utf-8')).decode(encoding='utf-8')  # some strings
-  linko_final = f'<a href="data:file/csv;base64,{b64}" download="{isim}">Download Analysed Data</a>'
-  st.markdown(linko_final, unsafe_allow_html=True) 
+  linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
+  st.markdown(linko_final, unsafe_allow_html=True)  
   
   df_analiz_show= df_analiz[['Product_Number','Inventory_Quantity','Category','Stock_Cover', 'Predicted_Sales_Speed']].copy()
   
