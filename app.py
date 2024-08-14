@@ -575,7 +575,8 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
    df['Sales63'].fillna(0,inplace=True)
    df['Sales84'].fillna(0,inplace=True)
    df['Inventory'].fillna(0,inplace=True)
-   st.dataframe(df_dummx) 
+   'Firs 4 rows of the uploaded data'
+   st.dataframe(df_dummx.head(4)) 
   except:
    'Upload Error.'
    'Check the excel file.'
