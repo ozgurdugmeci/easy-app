@@ -701,7 +701,12 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
    'Stock_Cover : The number of days until a product to be out of stock with the predicted sales speed.'
    'Predicted_Sales : Estimated 30-day sale values '
    'Test excel'
-    
+   isim= 'Analsed_Data.csv'
+   indir = df_analiz_download.to_csv(index=False)
+   b64 = base64.b64encode(indir.encode(encoding='utf-8')).decode(encoding='utf-8')  # some strings
+   linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
+   st.markdown(linko_final, unsafe_allow_html=True)    
+ 
    df_analiz_show= df_analiz[['Product','Category','Sub-Category','Inventory','Label','Stock_Cover', 'Predicted_Sales','Sales21','Sales42','Sales63','Sales84']].copy()
     
    df_analiz_show['Predicted_Sales']= df_analiz_show['Predicted_Sales'].round(0)
@@ -719,22 +724,6 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
     df_sfr=df_sfr.reset_index(drop=True)
     df_sfr2=df_sfr.astype(str).copy()
     st.dataframe(df_sfr2)
-   isim = 'Analysed_Data.csv'
-   'download button2'
-   # Convert DataFrame to CSV string yeeee
-   csv_data = df_analiz_download.to_csv(index=False)
-  
-   # Create a download button
-   st.download_button(
-      label="Download Analysed Data",
-      data=csv_data,  # Passing the CSV data as a string
-      file_name=isim,
-      mime='text/csv')     
-   isim= 'Analsed_Data.csv'
-   indir = df_analiz_download.to_csv(index=False)
-   b64 = base64.b64encode(indir.encode(encoding='utf-8')).decode(encoding='utf-8')  # some strings
-   linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
-   st.markdown(linko_final, unsafe_allow_html=True)    
   except:
    'Excel dosya sütunlarını kontrol edin.'
  
