@@ -720,7 +720,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
     df_sfr2=df_sfr.astype(str).copy()
     st.dataframe(df_sfr2)
    isim = 'Analysed_Data.csv'
-   'download button'
+   'download button2'
    # Convert DataFrame to CSV string yeeee
    csv_data = df_analiz_download.to_csv(index=False)
   
@@ -730,7 +730,11 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
       data=csv_data,  # Passing the CSV data as a string
       file_name=isim,
       mime='text/csv')     
-     
+   isim= 'Analsed_Data.csv'
+   indir = df_analiz_download.to_csv(index=False)
+   b64 = base64.b64encode(indir.encode(encoding='utf-8')).decode(encoding='utf-8')  # some strings
+   linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
+   st.markdown(linko_final, unsafe_allow_html=True)    
   except:
    'Excel dosya sütunlarını kontrol edin.'
  
