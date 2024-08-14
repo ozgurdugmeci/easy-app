@@ -537,7 +537,7 @@ elif yan_sayfa_secenek == 'Contact' :
 elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
  st.title("1- One File Upload")
  
- st.info('Once excel file is uploaded, analyses will automatically start.')
+ st.info('Upload excel file or click <b>Upload Test Data</b> button or, analyses will automatically start.')
  but= st.button("Upload Test Data") 
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
  st.markdown(urly_download_new,unsafe_allow_html=True)
