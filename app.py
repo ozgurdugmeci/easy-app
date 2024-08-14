@@ -306,7 +306,7 @@ elif yan_sayfa_secenek == 'Application Guide' :
  urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch csv upload.</a>'
  st.markdown(urly,unsafe_allow_html=True)
  urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch excel upload.</a>'
- st.markdown(urly_download_new,unsafe_allow_html=True)
+ #st.markdown(urly_download_new,unsafe_allow_html=True)
 
 
 
