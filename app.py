@@ -559,7 +559,9 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
                    '1xkaMB5vc_Jx5MqTc97ukyQgYOqFnGgNUQ7SP2FfQm_Q' +
                    '/export?gid=0&format=csv',
                    # Set first column as rownames in data frame
-                   index_col=0)  
+                   index_col=0) 
+    satr= len(df)
+    df
    df.columns=['Product','Category','Sub-Category','Sales21','Sales42','Sales63','Sales84','Inventory']
    df['Product'] = df['Product'].astype('str')
    df['Category'] = df['Category'].astype('str')
