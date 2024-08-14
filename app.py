@@ -720,7 +720,7 @@ elif yan_sayfa_secenek == 'Direct Excel Upload & Analyses' :
     df_sfr2=df_sfr.astype(str).copy()
     st.dataframe(df_sfr2)
    isim = 'Analysed_Data.csv'
-  
+   'download button'
    # Convert DataFrame to CSV string yeeee
    csv_data = df_analiz_download.to_csv(index=False)
   
