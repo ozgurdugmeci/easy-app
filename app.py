@@ -2,7 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Demand Planning")
-st.sidebar.title('Demand Planning Tool')
 st.title('Demand Planning Application Guide')
    
 htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
