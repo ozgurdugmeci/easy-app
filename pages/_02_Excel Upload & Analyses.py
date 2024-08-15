@@ -9,7 +9,7 @@ import base64
 from io import BytesIO
 from datetime import datetime
 from PIL import Image
-st.title("1- File Upload & Analyses")
+st.title("1- Excel Upload & Analyses")
  
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
 but= st.button("Upload Test Data",type="primary") 
