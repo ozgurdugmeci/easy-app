@@ -42,13 +42,5 @@ Thus necessary actions can be taken before a product quantity comes to a critica
 st.markdown(planner,unsafe_allow_html=True)
 st.subheader('3- Zero Sales') 
 'The products have no sales in the last 80 days are listed here. If there are no such products, this analysis does not appear on the screen.' 
-lif yan_sayfa_secenek == 'Contact' :
 
-st.title('Contact With Us')
-mail_b= f'<p>Your feed back is very important for us. Write about your user experience. Give us kudos! Ask questions. Inform us\
-about the errors you encountered. Tell about new ideas. You can reach us by clicking the link below. </p>'
-
-info_link= f'<a target="_blank" rel="noopener noreferrer" href="https://ozgur-dugmeci.medium.com/easy-inventory-planner-c1e5fc4aa0e">Click here to leave a comment.</a>'
-st.markdown(mail_b,unsafe_allow_html=True)
-st.markdown(info_link,unsafe_allow_html=True)
 
