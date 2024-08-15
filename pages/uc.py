@@ -1,3 +1,5 @@
+import streamlit as st
+import streamlit.components.v1 as components
 
 st.title('Contact With Us')
 mail_b= f'<p>Your feed back is very important for us. Write about your user experience. Give us kudos! Ask questions. Inform us\
