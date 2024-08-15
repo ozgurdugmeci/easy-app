@@ -204,8 +204,7 @@ if uploaded_file_x or but :
   
 takip= """ 
 <!-- Default Statcounter code for easy_analyses
-https://demand-planning-tool.streamlit.app/02_Excel_Upload_&_Analyses
--->
+https://demand-planning-tool.streamlit.app/ -->
 <script type="text/javascript">
 var sc_project=13027553; 
 var sc_invisible=1; 
