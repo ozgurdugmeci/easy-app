@@ -23,7 +23,7 @@ predicty= f'<p>When analyses part opens, this is the first analysis that appears
  
 st.markdown(predicty,unsafe_allow_html=True)
 
-st.subheader('2- Inventory Planner') 
+st.subheader('2- Sales Prediction & Calculate Stock-Cover Days') 
 
 
 
