@@ -44,25 +44,23 @@ st.subheader('3- Zero Sales')
 'The products have no sales in the last 80 days are listed here. If there are no such products, this analysis does not appear on the screen.' 
 
 takip= """ 
-<!-- Default Statcounter code for easy2
-https://share.streamlit.io/ozgurdugmeci/easy-app/main/app.py
--->
+<!-- Default Statcounter code for easy_about
+https://demand-planning-tool.streamlit.app/ -->
 <script type="text/javascript">
-var sc_project=12528966; 
-var sc_invisible=0; 
-var sc_security="5fb071da"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
+var sc_project=13029064; 
+var sc_invisible=1; 
+var sc_security="d8675173"; 
 </script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12528966/0/5fb071da/0/"
-alt="Web Analytics"></a></div></noscript>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13029064/0/d8675173/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
-
 """
 #st.markdown(takip, unsafe_allow_html=True)  
 components.html(takip,width=200, height=200)
