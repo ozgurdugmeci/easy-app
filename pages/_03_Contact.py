@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-
+'yo'
 st.title('Contact With Us')
 mail_b= f'<p>Your feed back is very important for us. Write about your user experience. Give us kudos! Ask questions. Inform us\
 about the errors you encountered. Tell about new ideas. You can contact me through <u>ozgur.dugmeci@gmail.com</u> . </p>'
