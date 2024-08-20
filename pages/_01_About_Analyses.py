@@ -43,25 +43,3 @@ st.markdown(planner,unsafe_allow_html=True)
 st.subheader('3- Zero Sales') 
 'The products have no sales in the last 80 days are listed here. If there are no such products, this analysis does not appear on the screen.' 
 
-takip= """ 
-<!-- Default Statcounter code for easy_about
-https://demand-planning-tool.streamlit.app/ -->
-<script type="text/javascript">
-var sc_project=13029064; 
-var sc_invisible=1; 
-var sc_security="d8675173"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="free web stats"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/13029064/0/d8675173/1/"
-alt="free web stats"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-"""
-#st.markdown(takip, unsafe_allow_html=True)  
-components.html(takip,width=200, height=200)
-    
