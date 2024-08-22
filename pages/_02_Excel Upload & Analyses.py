@@ -13,7 +13,7 @@ st.title("1- Excel Upload & Analyses")
  
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
 but= st.button("Upload Test Data",type="primary") 
-urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3zrxMl0cueQ">Click to watch how to upload excel file.</a>'
+urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=wahIMj-G3sE">Click to watch how to upload excel file.</a>'
 st.markdown(urly_download_new,unsafe_allow_html=True)
 rowy=[]
 "Upload an excel file considering the column names below."
