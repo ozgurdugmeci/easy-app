@@ -18,7 +18,7 @@ st.markdown(urly_download_new,unsafe_allow_html=True)
 rowy=[]
 "Upload an excel file considering the column names below."
 
-rowy=['Product No','Category','Sub Category','21-Day Sale','42-Day Sale','63-Day Sale','84-Day Sale','Inventory Quantity']
+rowy=['Product No','Category','Sub Category','21-Day Sale Qty','42-Day Sale Qty','63-Day Sale Qty','84-Day Sale Qty','Inventory Quantity']
 st.write('Column order in excel file must be :')
 rowy   
 st.set_option('deprecation.showfileUploaderEncoding', False)
