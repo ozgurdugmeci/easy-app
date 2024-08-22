@@ -18,7 +18,7 @@ st.markdown(biry,unsafe_allow_html=True)
    
 
 
-urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=kzYUHItdyOQ">Click to watch csv upload.</a>'
+urly= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=wahIMj-G3sE">Click to watch csv upload.</a>'
 #st.markdown(urly,unsafe_allow_html=True)
 urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=wahIMj-G3sE">Click to watch how to upload excel file.</a>'
 st.markdown(urly_download_new,unsafe_allow_html=True)
