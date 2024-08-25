@@ -16,7 +16,7 @@ df = pd.DataFrame({
 })
 
 log = pd.read_csv("Data/deneme.csv")
-
+log.columns=['deneme']
 st.dataframe(log)
 #df.to_csv("Data/deneme.csv")
 
