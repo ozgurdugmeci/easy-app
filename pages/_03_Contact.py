@@ -9,3 +9,5 @@ about the errors you encountered. Tell about new ideas. You can contact me throu
 st.markdown(mail_b,unsafe_allow_html=True)
 #st.markdown(info_link,unsafe_allow_html=True)
 
+
+genres_by_root = pd.read_csv("/Users/georgegg/root_table.csv",index_col=0)
