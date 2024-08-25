@@ -10,8 +10,12 @@ about the errors you encountered. Tell about new ideas. You can contact me throu
 st.markdown(mail_b,unsafe_allow_html=True)
 #st.markdown(info_link,unsafe_allow_html=True)
 
+log = pd.DataFrame({
+    "Column1": [1, 2, 3],
+    "Column2": ["A", "B", "C"]
+})
 
-log = pd.read_csv("/Data/log.csv")
+#log = pd.read_csv("/Data/log.csv")
 
 st.dataframe(log)
 
