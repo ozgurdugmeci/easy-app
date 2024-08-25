@@ -18,10 +18,10 @@ df = pd.DataFrame({
 log = pd.read_csv("Data/deneme.csv")
 log.columns=['deneme']
 log['haydi']=5
-log['haydi2']=5
+log['haydi3']=5
 
 st.dataframe(log)
 
-log.to_csv("deneme.csv")
+log.to_csv("Data/deneme.csv")
 #log.to_csv("deneme.csv")
 
