@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import streamlit.components.v1 as components
 
 st.title('Contact')
@@ -10,4 +11,8 @@ st.markdown(mail_b,unsafe_allow_html=True)
 #st.markdown(info_link,unsafe_allow_html=True)
 
 
-genres_by_root = pd.read_csv("/Users/georgegg/root_table.csv",index_col=0)
+log = pd.read_csv("/Data/log.csv",index_col=0)
+
+st.dataframe(log)
+
+
