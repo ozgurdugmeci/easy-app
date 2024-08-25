@@ -11,7 +11,7 @@ st.markdown(mail_b,unsafe_allow_html=True)
 #st.markdown(info_link,unsafe_allow_html=True)
 
 
-log = pd.read_csv("/Data/log.csv",index_col=0)
+log = pd.read_csv("/Data/log.csv")
 
 st.dataframe(log)
 
