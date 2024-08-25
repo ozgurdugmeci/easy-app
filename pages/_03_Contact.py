@@ -18,6 +18,7 @@ df = pd.DataFrame({
 log = pd.read_csv("Data/deneme.csv")
 log.columns=['deneme']
 log['haydi']=5
+log['haydi2']=5
 
 st.dataframe(log)
 
