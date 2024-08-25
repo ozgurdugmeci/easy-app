@@ -18,5 +18,5 @@ log = pd.DataFrame({
 #log = pd.read_csv("/Data/log.csv")
 
 st.dataframe(log)
-
+df.to_csv("Data/deneme.csv", index=False)
 
