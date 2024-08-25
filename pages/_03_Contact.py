@@ -22,6 +22,6 @@ log['haydi4']=5
 
 st.dataframe(log)
 
-log.to_csv("Data/deneme2.csv")
+#log.to_csv("Data/deneme2.csv")
 #log.to_csv("deneme.csv")
 
