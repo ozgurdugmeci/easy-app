@@ -10,8 +10,8 @@ st.set_page_config(
 #initial_sidebar_state="collapsed",
 # Define app pages
 landing_page = st.Page("./pages/_01_Home.py", title="Demand Planning", icon=":material/home:")
-about_page = st.Page("./pages/_02_About_Analyses.py", title="App", icon=":material/play_arrow:")
-admin_page = st.Page("./pages/_03_Excel Upload & Analayses.py", title="Admin", icon=":material/admin_panel_settings:"
+about_page = st.Page("./pages/_02_About_Analyses.py", title="About Analyses", icon=":material/play_arrow:")
+admin_page = st.Page("./pages/_03_Excel Upload & Analayses.py", title="App", icon=":material/admin_panel_settings:"
 )
 
 
