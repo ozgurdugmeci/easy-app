@@ -24,13 +24,16 @@ password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 mail=st.experimental_user.email
-
+user_name
+password
+dbase
+koleksiyon
 tarh
 mail
 
 # MongoDB connection URI
 uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
-
+uri
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 
@@ -41,8 +44,8 @@ collection = db[koleksiyon]  # Replace with your actual collection name
 # New document to insert
 new_document = {
     "company": "easy-free",
-    "email": tarh,
-    "date": "05.03.2025"
+    "email": mail,
+    "date": tarh
  }
 
 # Insert the document into the collection
