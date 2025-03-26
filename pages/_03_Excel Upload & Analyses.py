@@ -15,6 +15,8 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 tarh=datetime.now()
+tarh=str(tarh)
+tarh=tarh[:4]
 st.title("1- Excel Upload & Analyses")
 
 if st.button("🔓 Logout"):
@@ -25,7 +27,7 @@ password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 mail=st.experimental_user.email
-tarh=tarh[:4]
+
 '''user_name
 password
 dbase
