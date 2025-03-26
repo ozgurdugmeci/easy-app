@@ -13,10 +13,14 @@ from datetime import *
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+mail=st.experimental_user.email
 
 tarh=datetime.now()
 tarh=str(tarh)
 tarh=tarh[:4]
+tarh
+mail
+st.stop()
 st.title("1- Excel Upload & Analyses")
 
 if st.button("🔓 Logout"):
@@ -26,7 +30,6 @@ user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
-mail=st.experimental_user.email
 
 '''user_name
 password
