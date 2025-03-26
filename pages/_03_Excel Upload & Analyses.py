@@ -23,7 +23,7 @@ if st.button("🔓 Logout"):
  st.logout()
 tarh
 mail
-st.stop()
+
 user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
