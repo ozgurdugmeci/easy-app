@@ -6,8 +6,6 @@ st.title('Demand Planning Application Guide')
 
 a=st.secrets['database']['password']
 
-a
-
 if st.button('sign_in'):
  st.login("google")
 
