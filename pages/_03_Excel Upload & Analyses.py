@@ -19,17 +19,18 @@ st.title("1- Excel Upload & Analyses")
 
 if st.button("🔓 Logout"):
  st.logout()
+ 
 user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 mail=st.experimental_user.email
-user_name
+'''user_name
 password
 dbase
 koleksiyon
 tarh
-mail
+mail'''
 
 # MongoDB connection URI
 uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
