@@ -3,7 +3,7 @@ import streamlit as st
 #st.login("google")
 ####-------------------------------------------------
 st.set_page_config(
-    page_title="page_title",
+    page_title="Login Page",
     page_icon="✨",
     initial_sidebar_state="expanded"   
 )
