@@ -11,7 +11,7 @@ st.set_page_config(
 # Define app pages
 landing_page = st.Page("./pages/_01_Home.py", title="Demand Planning", icon=":material/home:")
 about_page = st.Page("./pages/_02_About_Analyses.py", title="About Analyses", icon=":material/play_arrow:")
-admin_page = st.Page("./pages/_03_Excel Upload & Analayses.py", title="App", icon=":material/admin_panel_settings:"
+admin_page = st.Page("./pages/_03_Excel Upload & Analyses.py", title="App", icon=":material/admin_panel_settings:"
 )
 
 
