@@ -35,8 +35,6 @@ koleksiyon=st.secrets['database']['koleksiyon']
 
 #client = MongoClient(uri, server_api=ServerApi('1'))
 
-#client = pymongo.MongoClient(f"mongodb+srv://<username>:{st.secrets['MONGODB_PASSWORD']}@<host>/?retryWrites=true&w=majority&appName=<AppName>")
-
 client = pymongo.MongoClient(
     f"mongodb+srv://{user_name}:{password}@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
 )
@@ -55,7 +53,7 @@ new_document = {
  }
 
 # Insert the document into the collection
-insert_result = collection.insert_one(new_document)
+#insert_result = collection.insert_one(new_document)
 
 
 
