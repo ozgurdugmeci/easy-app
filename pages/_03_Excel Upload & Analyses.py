@@ -10,7 +10,10 @@ from io import BytesIO
 from datetime import datetime
 from PIL import Image
 st.title("1- Excel Upload & Analyses")
- 
+
+if st.button("🔓 Logout"):
+ st.logout()
+
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
 but= st.button("Upload Test Data",type="primary") 
 urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=wahIMj-G3sE">Click to watch how to upload excel file.</a>'
