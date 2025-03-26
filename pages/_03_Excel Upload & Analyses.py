@@ -17,15 +17,16 @@ mail=st.experimental_user.email
 
 tarh=datetime.now()
 tarh=str(tarh)
-tarh=tarh[:4]
-tarh
-mail
+tarh=tarh[:10]
+
 st.stop()
 st.title("1- Excel Upload & Analyses")
 
 if st.button("🔓 Logout"):
  st.logout()
- 
+
+tarh
+mail 
 user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
