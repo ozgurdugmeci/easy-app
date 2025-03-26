@@ -4,7 +4,7 @@ import streamlit.components.v1 as components
 #st.set_page_config(page_title="Demand Planning")
 st.title('Demand Planning Application Guide')
 
-a=st.secrets['database']['password']
+
 
 if st.button('sign_in'):
  st.login("google")
