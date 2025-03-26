@@ -39,9 +39,10 @@ koleksiyon
 tarh
 mail'''
 st.stop()
+
 # MongoDB connection URI
 uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
-uri
+
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 
