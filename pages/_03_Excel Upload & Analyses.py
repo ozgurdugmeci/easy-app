@@ -9,6 +9,12 @@ import base64
 from io import BytesIO
 from datetime import datetime
 from PIL import Image
+from datetime import *
+
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+tarh=datetime.now()
 st.title("1- Excel Upload & Analyses")
 
 if st.button("🔓 Logout"):
@@ -17,8 +23,8 @@ user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
+mail=st.experimental_user.email
 
-st.stop()
 # MongoDB connection URI
 uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
 
@@ -32,7 +38,7 @@ collection = db[koleksiyon]  # Replace with your actual collection name
 # New document to insert
 new_document = {
     "company": "easy-free",
-    "email": "",
+    "email": tarh,
     "date": "05.03.2025"
  }
 
