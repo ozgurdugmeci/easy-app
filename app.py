@@ -23,7 +23,7 @@ if not st.experimental_user.is_logged_in:
     )
 elif st.experimental_user.email == 'ozgur.dugmeci@gmail.com':
     pg = st.navigation(
-        [admin_page,about_page],
+        [admin_page],
     )
 else:
     pg = st.navigation(
