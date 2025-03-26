@@ -30,29 +30,6 @@ dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 
 
-# MongoDB connection URI
-uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
-
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Select the database and collection
-db = client[dbase]  # Replace with your actual database name
-collection = db[koleksiyon]  # Replace with your actual collection name
-
-# New document to insert
-new_document = {
-    "company": "easy-free",
-    "email": mail,
-    "date": tarh
- }
-
-# Insert the document into the collection
-#insert_result = collection.insert_one(new_document)
-
-
-
-
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
 but= st.button("Upload Test Data",type="primary") 
 urly_download_new= f'<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=wahIMj-G3sE">Click to watch how to upload excel file.</a>'
