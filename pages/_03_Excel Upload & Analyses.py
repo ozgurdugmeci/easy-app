@@ -24,7 +24,7 @@ rowy=[]
 rowy=['Product No','Category','Sub Category','21-Day Sale Qty','42-Day Sale Qty','63-Day Sale Qty','84-Day Sale Qty','Inventory Quantity']
 st.write('Column order in excel file must be :')
 rowy   
-st.set_option('deprecation.showfileUploaderEncoding', False)
+#st.set_option('deprecation.showfileUploaderEncoding', False)
 uploaded_file_x = st.file_uploader("Select Excel File To Upload", type=['xlsx'])
 
 if uploaded_file_x or but :
