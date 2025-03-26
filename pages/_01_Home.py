@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.set_page_config(page_title="Demand Planning")
+#st.set_page_config(page_title="Demand Planning")
 st.title('Demand Planning Application Guide')
 
 if st.button('sign_in'):
