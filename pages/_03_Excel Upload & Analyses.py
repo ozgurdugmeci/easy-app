@@ -37,8 +37,10 @@ koleksiyon=st.secrets['database']['koleksiyon']
 
 #client = pymongo.MongoClient(f"mongodb+srv://<username>:{st.secrets['MONGODB_PASSWORD']}@<host>/?retryWrites=true&w=majority&appName=<AppName>")
 
+client = pymongo.MongoClient(
+    f"mongodb+srv://{user_name}:{password}@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
+)
 
-client = pymongo.MongoClient(f"mongodb+srv://" + user_name + ": + {" + password + "}@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl")
 
 
 # Select the database and collection
