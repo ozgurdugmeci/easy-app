@@ -21,8 +21,7 @@ tarh=tarh[:10]
 st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
  st.logout()
-tarh
-mail
+
 
 user_name=st.secrets['database']['user_name']
 password=st.secrets['database']['password']
