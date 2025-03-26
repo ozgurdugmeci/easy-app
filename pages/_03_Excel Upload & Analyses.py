@@ -25,12 +25,13 @@ password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 mail=st.experimental_user.email
-user_name
+tarh=tarh[:4]
+'''user_name
 password
 dbase
 koleksiyon
 tarh
-mail
+mail'''
 st.stop()
 # MongoDB connection URI
 uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
