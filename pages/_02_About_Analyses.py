@@ -5,7 +5,8 @@ import streamlit.components.v1 as components
 
 st.subheader('1- Predictability Analysis')
  
-
+if st.button("🔓 Logout"):
+ st.logout()
 htp6='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/predict_resim2.jpg'
 #image6 = Image.open(htp6)
 st.image(htp6, caption= 'Predictability Analysis', width=800)
