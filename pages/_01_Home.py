@@ -3,7 +3,10 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Demand Planning")
 st.title('Demand Planning Application Guide')
-   
+
+if st.button('sign_in'):
+ st.login("google")
+
 htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.jpg'
 #image0 = Image.open(htp6)
 st.image(htp0, caption= 'Model', width=600)
