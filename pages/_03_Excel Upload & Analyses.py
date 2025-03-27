@@ -47,8 +47,6 @@ new_document = {
     "date": tarh
  }
 
-mail
-app_name
 # Insert the document into the collection
 insert_result = collection.insert_one(new_document)
 
