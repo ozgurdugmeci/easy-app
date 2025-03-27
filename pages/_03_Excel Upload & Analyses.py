@@ -32,7 +32,7 @@ koleksiyon=st.secrets['database']['koleksiyon']
 
 client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName=msl")
 
-client = init_connection()
+#client = init_connection()
 
 # Select the database and collection
 db = client[dbase]  # Replace with your actual database name
