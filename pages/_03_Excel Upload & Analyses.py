@@ -45,15 +45,9 @@ new_document = {
     "date": tarh
  }
 
-try:
-    client.admin.command("ping")
-    "Connected to MongoDB!"
-except Exception as e:
-    'failed'
-    
-st.stop()
+
 # Insert the document into the collection
-#insert_result = collection.insert_one(new_document)
+insert_result = collection.insert_one(new_document)
 
 
 
