@@ -47,9 +47,10 @@ new_document = {
 
 try:
     client.admin.command("ping")
-    print("Connected to MongoDB!")
+    "Connected to MongoDB!"
 except Exception as e:
-    print("MongoDB Connection Failed:", e)
+    mes="MongoDB Connection Failed:" + e
+    mes
 st.stop()
 # Insert the document into the collection
 #insert_result = collection.insert_one(new_document)
