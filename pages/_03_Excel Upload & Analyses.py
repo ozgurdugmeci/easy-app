@@ -20,17 +20,17 @@ tarh=tarh[:10]
 st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
  st.logout()
-
-
+host=st.secrets['mongo']['host']
+user_name= st.secrets['mongo']['username']
+password= st.secrets['mongo']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 
 
 # Create a new client and connect to the server
 # Uses st.cache_resource to only run once.
-@st.cache_resource
-def init_connection():
-    return pymongo.MongoClient(**st.secrets["mongo"])
+
+client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName=msl")
 
 client = init_connection()
 
