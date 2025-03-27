@@ -11,8 +11,7 @@ from datetime import datetime
 from PIL import Image
 from datetime import *
 import pymongo
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+
 mail=st.experimental_user.email
 
 tarh=datetime.now()
@@ -23,23 +22,17 @@ if st.button("🔓 Logout"):
  st.logout()
 
 
-user_name=st.secrets['database']['user_name']
-password=st.secrets['database']['password']
 dbase=st.secrets['database']['dbase']
 koleksiyon=st.secrets['database']['koleksiyon']
 
 
-#uri = "mongodb+srv://" + user_name + ":"+ password + "@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
-
 # Create a new client and connect to the server
+# Uses st.cache_resource to only run once.
+@st.cache_resource
+def init_connection():
+    return pymongo.MongoClient(**st.secrets["mongo"])
 
-#client = MongoClient(uri, server_api=ServerApi('1'))
-
-client = pymongo.MongoClient(
-    f"mongodb+srv://{user_name}:{password}@msl.9vzzu.mongodb.net/?retryWrites=true&w=majority&appName=msl"
-)
-
-
+client = init_connection()
 
 # Select the database and collection
 db = client[dbase]  # Replace with your actual database name
@@ -53,7 +46,7 @@ new_document = {
  }
 
 # Insert the document into the collection
-#insert_result = collection.insert_one(new_document)
+insert_result = collection.insert_one(new_document)
 
 
 
