@@ -21,7 +21,7 @@ st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
  st.logout()
 
-app= st.secrets['mongo']['app']
+app_name= st.secrets['mongo']['app']
 host=st.secrets['mongo']['host']
 user_name= st.secrets['mongo']['username']
 password= st.secrets['mongo']['password']
@@ -32,7 +32,7 @@ koleksiyon=st.secrets['database']['koleksiyon']
 # Create a new client and connect to the server
 # Uses st.cache_resource to only run once.
 
-client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName={app}")
+client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName={app_name}")
 
 #client = init_connection()
 
@@ -47,12 +47,10 @@ new_document = {
     "date": tarh
  }
 
-
+mail
+app_name
 # Insert the document into the collection
 insert_result = collection.insert_one(new_document)
-
-
-
 
 
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
