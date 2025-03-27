@@ -11,7 +11,7 @@ st.set_page_config(
 # Define app pages
 landing_page = st.Page("./pages/_01_Home.py", title="Demand Planning", icon=":material/home:")
 about_page = st.Page("./pages/_02_About_Analyses.py", title="About Analyses", icon=":material/play_arrow:")
-admin_page = st.Page("./pages/_03_Excel Upload & Analyses.py", title="App", icon=":material/admin_panel_settings:"
+analiz_page = st.Page("./pages/_03_Excel Upload & Analyses.py", title="App", icon=":material/admin_panel_settings:"
 )
 
 
@@ -23,12 +23,12 @@ if not st.experimental_user.is_logged_in:
     )
 elif st.experimental_user.email == 'ozgur.dugmeci@gmail.com':
     pg = st.navigation(
-        [admin_page,about_page],
+        [analiz_page,about_page],
     )
 else:
     pg = st.navigation(
-        [app_page],
-        position="hidden",
+        [analiz_page,about_page],
+        
     )
 
 # Head to first page of navigation
