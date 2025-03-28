@@ -17,8 +17,8 @@ tarh=datetime.now()
 tarh=str(tarh)
 tarh=tarh[:10]
 
-if 'entry' not in st.session_state:
- st.session_state['entry']= 1
+if 'keyo' not in st.session_state:
+ st.session_state['keyo']= 1
 
 st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
@@ -35,7 +35,7 @@ koleksiyon=st.secrets['database']['koleksiyon']
 # Create a new client and connect to the server
 # Uses st.cache_resource to only run once.
 
-if st.session_state.entry == 1:
+if st.session_state.keyo == 1:
 
  client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName={app_name}")
 
@@ -51,7 +51,7 @@ if st.session_state.entry == 1:
     "date": tarh}
 
  insert_result = collection.insert_one(new_document)
- st.session_state.entry= 0
+ st.session_state.keyo= 0
 
 
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
