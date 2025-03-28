@@ -19,7 +19,8 @@ tarh=tarh[:10]
 
 if 'keyo' not in st.session_state:
  st.session_state['keyo']= 1
-
+a=st.session_state.keyo
+a
 st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
  st.logout()
