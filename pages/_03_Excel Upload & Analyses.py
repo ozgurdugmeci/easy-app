@@ -13,10 +13,13 @@ from datetime import *
 import pymongo
 #there you go mate
 mail=st.experimental_user.email
-
 tarh=datetime.now()
 tarh=str(tarh)
 tarh=tarh[:10]
+
+if 'entry' not in st.session_state:
+ st.session_state['entry']= 1
+
 st.title("1- Excel Upload & Analyses")
 if st.button("🔓 Logout"):
  st.logout()
@@ -32,23 +35,23 @@ koleksiyon=st.secrets['database']['koleksiyon']
 # Create a new client and connect to the server
 # Uses st.cache_resource to only run once.
 
-client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName={app_name}")
+if st.session_state['entry'] == 1:
 
-#client = init_connection()
+ client = pymongo.MongoClient(f"mongodb+srv://{user_name}:{password}@{host}/?retryWrites=true&w=majority&appName={app_name}")
 
-# Select the database and collection
-db = client[dbase]  # Replace with your actual database name
-collection = db[koleksiyon]  # Replace with your actual collection name
+ 
+ # Select the database and collection
+ db = client[dbase]  # Replace with your actual database name
+ collection = db[koleksiyon]  # Replace with your actual collection name
 
-# New document to insert
-new_document = {
+ # New document to insert
+ new_document = {
     "company": "easy-free",
     "email": mail,
-    "date": tarh
- }
+    "date": tarh}
 
-# Insert the document into the collection
-insert_result = collection.insert_one(new_document)
+ insert_result = collection.insert_one(new_document)
+ st.session_state['entry']= 0
 
 
 st.info('Upload excel file or click the button below. Analyses will automatically start.')
