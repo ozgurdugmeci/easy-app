@@ -14,10 +14,11 @@ htp0='https://raw.githubusercontent.com/ozgurdugmeci/easy-app/main/media/model4.
 st.image(htp0, caption= 'Model', width=600)
 
 
-biry= f'<p>It is an easy-to-use and smart way to manage your inventory. <br> \
- This app uses an unsupervised machine learning model to analyze your sales and stock data, calculating the sales speed for each product. <br> This helps you estimate \
- how long your stock will last. With application, you can easily keep track of your inventory levels, predict future needs, and avoid running out or having \
- too much stock. The app is simple and intuitive design makes it easy to use, helping you make better decisions and keep your business running smoothly.  <p>'
+
+
+biry= f'<p>Stock management is not just about knowing how much inventory you have. <br> \
+ It’s also about predicting when it will run out. With Manage Stock Levels, you can easily calculate your stock depletion days, <br> you can easily calculate \
+ your stock depletion days, helping you avoid both overstocking and stockouts. <p>'
 
 st.markdown(biry,unsafe_allow_html=True)
    
