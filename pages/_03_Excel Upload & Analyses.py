@@ -112,7 +112,7 @@ if uploaded_file_x or but :
   df_analiz['Range3']= df_analiz.Sales63-df_analiz.Sales42
   df_analiz['Range4']= df_analiz.Sales84-df_analiz.Sales63
    
-  df_analiz['ktsy']= (df_analiz[['Range1','Range2','Range3','Range4']].std(axis=1))/(df_analiz[['Range1','Range2','Range3','Range4']].mean(axis=1))
+  df_analiz['ktsy']= (df_analiz[['Range1','Range2','Range3','Range4']].mean(axis=1))/(df_analiz[['Range1','Range2','Range3','Range4']].mean(axis=1))
    
   kosul=[
    
