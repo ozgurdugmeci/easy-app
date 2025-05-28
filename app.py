@@ -13,8 +13,8 @@ landing_page = st.Page("./pages/_01_Home.py", title="Demand Planning", icon=":ma
 about_page = st.Page("./pages/_02_About_Analyses.py", title="About Analyses", icon=":material/play_arrow:")
 analiz_page = st.Page("./pages/_03_Excel Upload & Analyses.py", title="Analysis", icon=":material/admin_panel_settings:"
 )
-
-
+'This page is under construction'
+st.stop()
 
 if not st.experimental_user.is_logged_in:
     pg = st.navigation(
